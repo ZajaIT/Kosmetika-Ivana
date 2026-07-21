@@ -57,6 +57,9 @@ body{
     background:var(--bg);
     color:var(--text);
 }
+    body.menu-open{
+    overflow:hidden;
+}
 
 img{
 
@@ -880,8 +883,33 @@ font-size:20px;
 }
 
 .menu{
-display:none;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    transition:.35s;
+    z-index:999;
+}
 
+.menu.active{
+    right:0;
+}
+
+.menu a{
+    font-size:24px;
+    letter-spacing:2px;
+}
+
+.menu-toggle{
+    position:relative;
+    z-index:1001;
 }
 
 .logo{
@@ -2124,6 +2152,34 @@ document.querySelectorAll(".accordion-header").forEach(header=>{
             content.style.height = content.scrollHeight + "px";
             content.style.paddingBottom = "30px";
         }
+
+    });
+
+});
+
+    const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+
+    if(menu.classList.contains("active")){
+        menuToggle.textContent = "✕";
+    }else{
+        menuToggle.textContent = "☰";
+    }
+
+});
+
+document.querySelectorAll(".menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        menuToggle.textContent = "☰";
 
     });
 
