@@ -849,6 +849,16 @@ line-height:1.8;
     color:#666;
     flex-shrink:0;
 }
+    .menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:34px;
+    cursor:pointer;
+    color:var(--text);
+    line-height:1;
+    padding:0;
+}
 
 @media(max-width:900px){
 
@@ -875,9 +885,12 @@ display:none;
 }
 
 .logo{
-font-size:22px;
-letter-spacing:3px;
+    display:none;
+}
 
+.menu-toggle{
+    display:block;
+    margin-left:auto;
 }
 
 .section-title h2{
@@ -1126,6 +1139,10 @@ grid-template-columns:1fr;
 <div class="logo">
 KOSMETIKA IVANA
 </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+    ☰
+</button>
 
 <div class="menu">
 
