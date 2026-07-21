@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kosmetika Ivana | Profesionální kosmetická péče</title>
+
+<meta name="description" content="Kosmetika Ivana nabízí profesionální kosmetickou péči, ošetření pleti, manikúru, masáže, dárkové poukazy a kosmetiku ALCINA.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --taupe:#D7B6A8;
+    --taupe-dark:#C59F8E;
+    --taupe-light:#F5ECE8;
+
+    --bg:#faf8f6;
+    --white:#ffffff;
+    --text:#393633;
+
+    --container:1400px;
+
+    --shadow:0 15px 45px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Roboto Condensed',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+    margin:auto;
+
+}
+
+/* ---------------- HEADER ---------------- */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:14px 0;
+    z-index:1000;
+    transition:.35s;
+
+    background:#fff;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+
+}
+
+header.scrolled{
+
+    padding:12px 0;
+
+}
+
+nav{
+
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+
+}
+
+.logo{
+
+   font-family:'Poppins',sans-serif;
+   font-size:22px;
+   font-weight:600;
+   letter-spacing:3px;
+
+}
+
+.menu{
+
+    display:flex;
+    gap:40px;
+
+}
+
+.menu a{
+
+   font-family:'Poppins', Helvetica, Arial, sans-serif;
+   font-size:18px;
+   font-weight:500;
+   letter-spacing:2px;
+   text-transform:uppercase;
+   position:relative;
+
+}
+
+.menu a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--taupe);
+    transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ------------ HERO ------------ */
+
+.hero{
+
+   height:100vh;
+   position:relative;
+   display:flex;
+   align-items:center;
+   overflow:hidden;
+
+}
+
+.hero img{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center -90px;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    left:0;
+    top:0;
+    width:55%;
+    height:100%;
+    background:linear-gradient(
+    90deg,
+    rgba(250,248,246,.96),
+    rgba(250,248,246,.80),
+    rgba(250,248,246,.35),
+    transparent
+);
+
+}
+
+.hero-content{
+   
+    position:relative;
+    z-index:2;
+    max-width:620px;
+    padding-top:50px;
+
+}
+
+.hero small{
+
+    font-family:'Poppins',sans-serif;
+    letter-spacing:4px;
+    font-size:15px;
+    color:var(--taupe-dark);
+    text-transform:uppercase;
+    display:block;
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-family:'Poppins',sans-serif;
+    font-size:65px;
+    font-weight:700;
+    line-height:1.05;
+    margin-bottom:28px;
+    text-transform:uppercase;
+
+}
+
+.hero p{
+
+font-size:24px;
+line-height:1.6;
+
+max-width:520px;
+
+margin-bottom:40px;
+
+}
+
+.btn{
+
+   display:inline-flex;
+   align-items:center;
+   justify-content:center;
+   padding:15px 38px;
+   background:var(--taupe);
+   color:#fff;
+   border-radius:40px;
+   font-family:'Poppins',sans-serif;
+   font-size:19px;
+   font-weight:600;
+   letter-spacing:1px;
+   transition:.3s;
+   text-transform:uppercase;
+
+}
+
+.btn:hover{
+
+background:var(--taupe-dark);
+
+}
+
+section{
+
+padding:120px 0;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+   font-family:'Poppins',sans-serif;
+   font-size:44px;
+   font-weight:700;
+   margin-bottom:20px;
+   text-transform:uppercase;
+
+}
+
+.section-title p{
+
+font-size:22px;
+
+max-width:760px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+/* ==========================
+ABOUT
+========================== */
+
+.about{
+
+background:#fff;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.about-image img{
+
+width:100%;
+height:550px;
+object-fit:cover;
+box-shadow:var(--shadow);
+
+}
+
+.about-text small{
+
+font-family:Poppins,sans-serif;
+
+letter-spacing:3px;
+
+color:var(--taupe-dark);
+
+display:block;
+
+margin-bottom:15px;
+
+}
+
+.about-text h2{
+
+font-family:Poppins,sans-serif;
+
+font-size:48px;
+
+line-height:1.2;
+
+margin-bottom:30px;
+
+}
+
+.about-text p{
+
+font-size:22px;
+
+line-height:1.9;
+
+margin-bottom:25px;
+
+color:#555;
+
+}
+
+
+/* ==========================
+SERVICES
+========================== */
+
+.services{
+
+background:var(--taupe-light);
+
+}
+
+.services-list{
+    background:#fff;
+    padding:70px;
+    box-shadow:var(--shadow);
+}
+
+.service-item{
+    padding:35px 0;
+    border-bottom:1px solid #e7e7e7;
+}
+
+.service-item:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+
+.service-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:10px;
+}
+
+.service-head h3{
+    font-family:'Poppins',sans-serif;
+    font-size:24px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin:0;
+}
+
+.service-head span{
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+    font-weight:700;
+    color:var(--taupe-dark);
+    white-space:nowrap;
+}
+
+.service-text{
+    font-size:18px;
+    line-height:1.4;
+    color:#555;
+    margin:0;
+}
+
+/* =======================
+PRICING
+======================= */
+
+.pricing{
+
+background:var(--taupe-light);
+
+}
+
+.pricing-wrapper{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+}
+
+.price-box{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+}
+
+.accordion-item{
+    background:#fff;
+
+    box-shadow:var(--shadow);
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+.accordion-header{
+    width:100%;
+    background:#fff;
+    border:none;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 30px;
+
+    font-family:'Poppins',sans-serif;
+    font-size:24px;
+    font-weight:600;
+}
+
+.accordion-header .icon{
+    font-size:34px;
+    color:var(--taupe-dark);
+    transition:.3s;
+}
+
+.accordion-content{
+    height:0;
+    overflow:hidden;
+    transition:height .35s ease;
+    padding:0 35px;
+}
+
+.accordion-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.price-box h3{
+
+font-family:Poppins,sans-serif;
+
+font-size:30px;
+
+margin-bottom:35px;
+
+}
+
+.price-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:10px 0;
+
+border-bottom:1px solid #ececec;
+
+gap:20px;
+
+}
+
+.price-row:last-child{
+
+border:none;
+
+}
+
+.price-row span{
+
+font-size:20px;
+
+}
+
+.price-row strong{
+
+font-family:Poppins,sans-serif;
+
+font-size:19px;
+
+color:var(--taupe-dark);
+
+white-space:nowrap;
+
+}
+
+/* ==========================
+GIFT
+========================== */
+
+.gift{
+    background:#fff;
+}
+
+.gift-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+align-items:center;
+
+}
+
+.gift-image img{
+
+width:100%;
+
+height:auto;
+
+object-fit:contain;
+
+box-shadow:var(--shadow);
+
+background:#fff;
+
+}
+
+.gift-text small,
+.alcina-text small{
+
+font-family:Poppins,sans-serif;
+
+letter-spacing:3px;
+
+color:var(--taupe-dark);
+
+display:block;
+
+margin-bottom:15px;
+
+}
+
+.gift-text h2,
+.alcina-text h2{
+
+font-family:Poppins,sans-serif;
+
+font-size:48px;
+
+margin-bottom:30px;
+
+}
+
+.gift-text p,
+.alcina-text p{
+
+font-size:22px;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+color:#555;
+
+}
+
+
+/* ==========================
+ALCINA
+========================== */
+
+.alcina{
+
+background:#fff;
+padding:0px 0;
+
+}
+
+.alcina-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:90px;
+
+align-items:center;
+
+}
+
+.alcina-text{
+    padding-left:70px;
+}
+
+.alcina-image{
+    margin-left:-50px;
+}
+
+.alcina-image img{
+
+width:100%;
+
+height:520px;
+
+object-fit:contain;
+
+}
+
+
+/* ==========================
+INTERIÉR
+========================== */
+
+.interier{
+
+background:var(--taupe-light);
+
+}
+
+.interier-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    align-items:start;
+}
+
+.interier-grid img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.interier-grid img:nth-child(2){
+    object-position:85% center;
+}
+
+/* =======================
+CONTACT
+======================= */
+
+.contact{
+
+background:#fff;
+
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px;
+    margin-top:50px;
+    align-items:start;
+}
+
+.contact-card{
+    padding:0;
+}
+
+.contact-card h3{
+
+font-family:Poppins,sans-serif;
+
+font-size:30px;
+
+margin-bottom:25px;
+
+}
+
+.contact-card p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:20px;
+
+}
+
+.contact-card:first-child{
+    padding-left:60px;
+}
+
+.contact iframe{
+    width:88%;
+    height:255px;
+    border:0;
+    margin-top:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.contact-divider{
+    width:85%;
+    border-bottom:1px solid var(--taupe);
+    margin:0 0 25px;
+}
+
+.contact-divider p{
+    margin:0;
+    padding-bottom:18px;
+}
+
+.address a{
+    display:inline-block;
+    line-height:1.2;
+}
+
+
+/* =======================
+FOOTER
+======================= */
+
+footer{
+    background:#ddd1cb;
+    padding:35px 0;
+    margin-top:0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:110px;
+}
+
+.footer-content h3{
+
+font-family:Poppins,sans-serif;
+
+margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+font-size:19px;
+
+line-height:1.8;
+
+}
+
+.footer-content .footer-info-title{
+    font-family:Poppins,sans-serif;
+    font-size:20px;
+    font-weight:600;
+    margin:0 0 4px;
+}
+
+.footer-content .footer-info{
+    font-size:18px;
+    line-height:1.4;
+    margin:0;
+    color:#4f4f4f;
+}
+
+.footer-content .footer-credit{
+    margin-top:8px;
+    font-size:14px;
+    line-height:1.2;
+    color:#666;
+}
+
+.footer-credit a{
+    color:inherit;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.footer-credit a:hover{
+    color:var(--taupe-dark);
+}
+
+.footer-payment{
+    min-width:220px;
+}
+
+.payment-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
+}
+
+.payment-item svg{
+    width:20px;
+    height:20px;
+    color:#666;
+    flex-shrink:0;
+}
+
+@media(max-width:900px){
+
+.hero-overlay{
+
+width:100%;
+
+background:rgba(250,248,246,.83);
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:22px;
+
+letter-spacing:3px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.about-image img{
+
+height:380px;
+
+}
+
+.about-text h2{
+
+font-size:34px;
+
+}
+
+.about-text p{
+
+font-size:19px;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.pricing-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.gift-grid,
+.alcina-grid{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.gift-image img,
+.interier-grid img{
+
+height:350px;
+
+}
+
+.interier-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+KOSMETIKA IVANA
+</div>
+
+<div class="menu">
+
+<a href="#home">Domů</a>
+<a href="#about">O nás</a>
+<a href="#sluzby">Služby</a>
+<a href="#cenik">Ceník</a>
+<a href="#kontakt">Kontakt</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<img src="hero2.webp" alt="Kosmetika Ivana">
+
+<div class="hero-overlay"></div>
+
+<div class="container">
+
+<div class="hero-content">
+
+<small>Profesionální kosmetická péče</small>
+
+<h1>Kosmetika Ivana</h1>
+
+<p>
+Dopřejte si u nás profesionální péči v příjemném prostředí.
+Pracujeme výhradně s kvalitní německou kosmetikou ALCINA.
+</p>
+
+<a href="#kontakt" class="btn">
+
+Objednat se
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ÚVOD
+=========================== -->
+
+<section id="about" class="about">
+
+<div class="container about-grid">
+
+
+
+<div class="about-text">
+
+<small>KVALITNÍ PÉČE</small>
+
+<h2>Každá žena si zaslouží individuální přístup.</h2>
+
+<p>
+
+V salonu Kosmetika Ivana nabízíme kvalitní kosmetické služby
+za dostupné ceny. Používáme výhradně značkovou kosmetiku <strong>ALCINA</strong> - produkty u nás k zakoupení.
+</p>
+
+<p>
+
+Součástí nabídky jsou například relaxační masáže,
+manikúra, P-Shine, barvení řas, úprava obočí, depilace obličeje, lymfodrenáž,
+parafínové a rašelinové zábaly a další kosmetická ošetření.
+
+
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img src="fotka-uvod-kosmetika.webp" alt="Kosmetický salon">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+SLUŽBY
+=========================== -->
+
+<section id="sluzby" class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Služby</h2>
+
+<p>
+
+Provádíme ošetření s použitím německé kosmetiky ALCINA
+
+</p>
+
+</div>
+
+<div class="services-list">
+
+    <div class="service-item">
+
+        <div class="service-head">
+            <h3>Základní ošetření</h3>
+            <span>od 1 300 Kč</span>
+        </div>
+
+        <p class="service-text">
+Analýza pleti, odlíčení, tonizace, enzymatický peeling, masáž obličeje, krku a dekoltu, čištění pleti s použitím změkčujícího gelu, opětovná tonizace, aplikace oční a pleťové masky, maska na dekolt, čas na relaxaci, závěrečná péče - oční a pleťový krém podle typu pleti.
+</p>
+
+    </div>
+
+    <div class="service-item">
+
+        <div class="service-head">
+            <h3>Detoxikační ošetření</h3>
+            <span>od 1 000 Kč</span>
+        </div>
+
+        <p class="service-text">
+Analýza pleti, masáž čistícím gelem, jílový peeling, tonizace, bylinná maska, akupresura, závěrečná péče. Pleť je po ošetření hladká, má zjemněné póry a sjednocenou strukturu.
+</p>
+
+    </div>
+
+    <div class="service-item">
+
+        <div class="service-head">
+            <h3>Konturovací lymfatická masáž - Ošetření It´s never too late (Nikdy není pozdě)</h3>
+            <span>od 1 450 Kč</span>
+        </div>
+
+        <p class="service-text">
+Čistící masáž, power peeling, tonizace, konturovací masáž, maska - čas na relaxaci, závěrečná péče.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Liftingová masáž kolagenem</h3>
+            <span>od 1 400 Kč</span>
+        </div>
+
+        <p class="service-text">
+Odlíčení, úprava obočí, enzymatický peeling, liftingová masáž kolagenem, aktivní sérum, mikrokolagenová vlies maska, závěrečná péče - aktivní sérum, kolagenový krém, oční krém.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Rich Anti Age ošetření</h3>
+            <span>od 1 100 Kč</span>
+        </div>
+
+        <p class="service-text">
+Odlíčení, úprava obočí, enzymatický peeling, čištění pleti, masáž Rich Anti Age krémem, pleťová vitalizační maska s kofeinem, hyaluron 2.0, Rich Anti Age krém.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Rašelinové zábaly</h3>
+            <span>od 200 Kč</span>
+        </div>
+
+        <p class="service-text">
+Jedna z nejuznávanějších forem tepelné terapie, při které dochází k uvolnění svalových kontrakcí, detoxikaci organismu a příjemné relaxaci. Vhodné při bolestech kloubů, zad a páteře. Analgetický efekt, přirozená aktivace imunitního systému.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Parafínové zábaly</h3>
+            <span>od 130 Kč</span>
+        </div>
+
+        <p class="service-text">
+Ruce, ramena, lokty, záda, kyčle, kolena, nohy.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Manikúra klasická</h3>
+            <span>od 300 Kč</span>
+        </div>
+
+        <p class="service-text">
+Zapilování nehtů do tvaru a délky požadovaného klientkou, úprava kůžiček, olejíček na nehtové valy, závěrečné ošetření krémem.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>P-shine</h3>
+            <span>od 400 Kč</span>
+        </div>
+
+        <p class="service-text">
+Klasická manikúra + zaleštění P-shine pastou (složení: včelí vosk, mateří kašička, křemičitá hlinka, jemné parafíny, glycerin, bentonit, panthenol, vitamíny A, E, H a provitamin B5) a přeleštění P-shine pudrem.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>CND-shellac</h3>
+            <span>od 600 Kč</span>
+        </div>
+
+        <p class="service-text">
+Lakování přírodního nehtu ve čtyřech vrstvách vytvrzených UV lampou. Žádné pilování, odolný zrcadlový povrch, dlouhodobá trvanlivost cca 2-3 týdny, jednoduché odstranění během 5 minut jemnými shellac-polštářky.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>SPA manikúra Cuccio naturale</h3>
+            <span>od 350 Kč</span>
+        </div>
+
+        <p class="service-text">
+Peeling, vyživení hroznovým antioxidačním olejíčkem, maska, zapečetění tělovým máslem, zpevňující lak.
+</p>
+
+    </div>
+
+<div class="service-item">
+
+        <div class="service-head">
+            <h3>Lymfodrenážní přístroj</h3>
+            <span>od 300 Kč</span>
+        </div>
+
+        <p class="service-text">
+Odvodňuje, zeštíhluje, povzbuzuje metabolismus. Vhodné při pocitu těžkých nohou, na tenisový loket čí bolesti ramen.
+</p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+ALCINA
+=========================== -->
+
+<section class="alcina">
+
+<div class="container alcina-grid">
+
+<div class="alcina-text">
+
+<small>PROFESIONÁLNÍ KOSMETIKA</small>
+
+<h2>ALCINA</h2>
+
+<p>
+
+Veškerá kosmetická ošetření provádíme výhradně
+s profesionální německou kosmetikou
+<strong>ALCINA.</strong>
+
+Kromě samotných ošetření je možné produkty
+ALCINA zakoupit také přímo v našem salonu.
+
+Rádi Vám doporučíme vhodnou domácí péči
+přesně podle potřeb Vaší pleti.
+
+</p>
+
+</div>
+
+<div class="alcina-image">
+
+<img src="alcina1.png" alt="Kosmetika Alcina">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+CENÍK
+=========================== -->
+
+<section id="cenik" class="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Ceník</h2>
+
+<p>
+
+Zde najdete kompletní ceník všech poskytovaných služeb.
+
+</p>
+
+</div>
+
+<div class="accordion">
+
+    <div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Obočí a řasy</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+       <div class="price-row">
+            <span>Lifting obočí</span>
+            <strong>200 Kč</strong>
+        </div>
+
+       <div class="price-row">
+            <span>Lifting obočí samostatně</span>
+            <strong>450 Kč</strong>
+        </div>        
+
+        <div class="price-row">
+            <span>Úprava obočí</span>
+            <strong>30–70 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Barvení obočí</span>
+            <strong>120 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Barvení obočí samostatně</span>
+            <strong>180 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Úprava + barvení obočí samostatně</span>
+            <strong>240 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Barvení řas</span>
+            <strong>160 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Barvení řas samostatně</span>
+            <strong>240 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Čištění, peeling a masky</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+        <div class="price-row">
+            <span>Odlíčení + povrchové čištění</span>
+            <strong>20 + 30 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Peeling enzymatický</span>
+            <strong>70 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Změkčující gel</span>
+            <strong>20 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Hloubkové čištění do 10 minut</span>
+            <strong>50 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Hloubkové čištění nad 10 minut</span>
+            <strong>80 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Hloubkové čištění samostatně</span>
+            <strong>450 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Pleťová maska</span>
+            <strong>200 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Maska na dekolt</span>
+            <strong>150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Oční maska</span>
+            <strong>70 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Oční maska mikrokolagenová</span>
+            <strong>180 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Peeling na rty</span>
+            <strong>80 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Maska na rty</span>
+            <strong>60 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Kosmetická ošetření</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+        <div class="price-row">
+            <span>Kosmetická masáž (obličej, krk, dekolt, mikromasáž očí)</span>
+            <strong>450 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Kosmetická masáž samostatně</span>
+            <strong>550 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Mikromasáž očního okolí</span>
+            <strong>300 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Rich Anti Age</span>
+            <strong>1 100 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Detoxikační ošetření</span>
+            <strong>1 000 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Liftingová masáž kolagenem</span>
+            <strong>1 400 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Konturovací lymfatická masáž</span>
+            <strong>1 450 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Depilace</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+        <div class="price-row">
+            <span>Horní ret</span>
+            <strong>80 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Horní ret samostatně</span>
+            <strong>100 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Obličej</span>
+            <strong>150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Obličej samostatně</span>
+            <strong>250 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Podpaží</span>
+            <strong>150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Podpaží samostatně</span>
+            <strong>180 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Ruce</span>
+            <strong>180–300 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Třísla</span>
+            <strong>180–250 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Nohy ke kolenům</span>
+            <strong>400 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Celé nohy</span>
+            <strong>400–650 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Lymfodrenáž a zábaly</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+        <div class="price-row">
+            <span><strong>Lymfomasážní přístroj</strong></span>
+            <strong></strong>
+        </div>
+
+        <div class="price-row">
+            <span>1 aplikace</span>
+            <strong>300 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>6 aplikací</span>
+            <strong>1 500 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span><strong>Termozábaly</strong></span>
+            <strong></strong>
+        </div>
+
+        <div class="price-row">
+            <span>Ruce</span>
+            <strong>130 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Nohy</span>
+            <strong>150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span><strong>Parafínové zábaly</strong></span>
+            <strong></strong>
+        </div>
+
+        <div class="price-row">
+            <span>Ruce</span>
+            <strong>130 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Nohy</span>
+            <strong>150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Kyčel</span>
+            <strong>100 Kč / obě 180 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Koleno</span>
+            <strong>100 Kč / obě 150 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Rameno</span>
+            <strong>150 Kč / obě 220 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>Záda</span>
+            <strong>200 Kč + každý další pruh 50 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span><strong>Rašelinový zábal – malý (lokty, krk, kolena)</strong></span>
+            <strong></strong>
+        </div>
+
+        <div class="price-row">
+            <span>1 aplikace</span>
+            <strong>200 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>5 aplikací</span>
+            <strong>800 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>10 aplikací</span>
+            <strong>1 500 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span><strong>Rašelinový zábal – velký (záda, ramena, kyčle)</strong></span>
+            <strong></strong>
+        </div>
+
+        <div class="price-row">
+            <span>1 aplikace</span>
+            <strong>230 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>5 aplikací</span>
+            <strong>950 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>10 aplikací</span>
+            <strong>1 800 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="accordion-item">
+
+    <button class="accordion-header">
+        <span>Manikúra</span>
+        <span class="icon">+</span>
+    </button>
+
+    <div class="accordion-content">
+
+        <div class="price-row">
+            <span>Klasická manikúra</span>
+            <strong>300 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>P-Shine</span>
+            <strong>400 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>CND Shellac</span>
+            <strong>600 Kč</strong>
+        </div>
+
+        <div class="price-row">
+            <span>SPA manikúra Cuccio Naturale</span>
+            <strong>350 Kč</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+DÁRKOVÉ POUKAZY
+=========================== -->
+
+<section class="gift">
+
+<div class="container gift-grid">
+
+<div class="gift-image">
+
+<img src="poukaz.png" alt="Dárkové poukazy">
+
+</div>
+
+<div class="gift-text">
+
+<small>POTĚŠTE SVÉ BLÍZKÉ</small>
+
+<h2>Dárkové poukazy</h2>
+
+<p>
+
+Hledáte originální dárek pro své blízké?
+Darujte chvíle odpočinku, relaxace a profesionální péče.
+
+Dárkové poukazy jsou k zakoupení přímo v našem salonu
+v libovolné hodnotě nebo na vybrané kosmetické ošetření.
+
+</p>
+
+<a href="#kontakt" class="btn">
+
+Mám zájem
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===========================
+INTERIÉR
+=========================== -->
+
+<section class="interier">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Interiér salonu</h2>
+
+<p>
+
+Příjemné prostředí, ve kterém si odpočinete.
+
+</p>
+
+</div>
+
+<div class="interier-grid">
+
+    <img src="interier1.webp" alt="Interiér salonu">
+
+    <img src="interier3.png" alt="Interiér salonu">
+
+    <img src="interier2.webp" alt="Interiér salonu">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+KONTAKT
+=========================== -->
+
+<section id="kontakt" class="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Kontakt</h2>
+
+<p>
+
+Objednejte se telefonicky nebo e-mailem.
+Rádi se Vám budeme věnovat.
+
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <h3>POBOČKA PRAHA</h3>
+
+        <div class="contact-divider">
+    <p class="address">
+        <a href="https://maps.app.goo.gl/7pskRkLXbt2dbhFp6" target="_blank" rel="noopener">
+            Libušská 400<br>
+            142 00 Praha 4 – Písnice
+        </a>
+    </p>
+</div>
+
+        <h3 style="margin-top:35px;">POBOČKA DOBŘÍŠ</h3>
+
+        <p class="address">
+            <a href="https://maps.app.goo.gl/FJcTfYqhdsy5q6xT8" target="_blank" rel="noopener">
+    Slovanská Lhota 16<br>
+    263 01 Dobříš
+</a>
+        </p>
+
+        <div class="contact-divider">
+    <p><strong>Pouze po předchozí telefonické domluvě.</strong></p>
+</div>
+
+        <p>
+            <strong>TELEFON</strong><br>
+            <a href="tel:+420737252558">737 252 558</a>
+        </p>
+
+        <p>
+            <strong>E-MAIL</strong><br>
+            <a href="mailto:ivanakopackova@seznam.cz">ivanakopackova@seznam.cz</a>
+        </p>
+
+    </div>
+
+    <div class="contact-card">
+
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.1258098885978!2d14.46351730006356!3d50.00235846080752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b91734eb9c1e1%3A0x92ce5aab06316c84!2zTGlidcWhc2vDoSA0MDAvMTE1LCAxNDIgMDAgUHJhaGEtTGlidcWhLCDEjGVza28!5e1!3m2!1scs!2shr!4v1784631207188!5m2!1scs!2shr"
+    loading="lazy">
+</iframe>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.6595483885708!2d14.258644475434401!3d49.72176853956358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b7404630ac299%3A0xf88222f9a4a8483b!2zU2xvdmFuc2vDoSBMaG90YSAxNiwgMjYzIDAxIERyZXZuw61reS1Eb2LFmcOtxaEsIMSMZXNrbw!5e1!3m2!1scs!2shr!4v1784630732745!5m2!1scs!2shr"
+        loading="lazy">
+    </iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+
+<h3>© Kosmetika Ivana</h3>
+
+<p>
+
+Profesionální péče s kosmetikou ALCINA.
+
+</p>
+
+<p class="footer-credit">
+    Designed by
+    <a href="https://www.zajait.cz" target="_blank" rel="noopener">
+        ZajaIT
+    </a>
+</p>
+
+</div>
+
+<div class="footer-payment">
+
+    <h4 class="footer-info-title">Možnosti platby</h4>
+
+    <p class="footer-info payment-item">
+        <!-- Hotově -->
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="6" width="18" height="12" rx="2"/>
+            <circle cx="12" cy="12" r="2.5"/>
+        </svg>
+        Hotově
+    </p>
+
+    <p class="footer-info payment-item">
+        <!-- QR -->
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="5" height="5"/>
+            <rect x="16" y="3" width="5" height="5"/>
+            <rect x="3" y="16" width="5" height="5"/>
+            <path d="M12 5h2M12 9h4M10 12h2M15 12h2M12 15v2M17 16v5M13 18h2"/>
+        </svg>
+        Platba QR kódem
+    </p>
+
+</div>
+
+<div>
+    <h4 class="footer-info-title">Ivana Kopáčková</h4>
+
+    <p class="footer-info">
+        IČO: 63068541<br>
+        Slovanská Lhota 16<br>
+        263 01 Drevníky
+    </p>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+const header=document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>50){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+document.querySelectorAll(".accordion-header").forEach(header=>{
+
+    header.addEventListener("click",()=>{
+
+        const item = header.parentElement;
+        const content = item.querySelector(".accordion-content");
+
+        if(item.classList.contains("active")){
+            item.classList.remove("active");
+            content.style.height = "0px";
+            content.style.paddingBottom = "0";
+        }else{
+            item.classList.add("active");
+            content.style.height = content.scrollHeight + "px";
+            content.style.paddingBottom = "30px";
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
