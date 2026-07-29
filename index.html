@@ -984,20 +984,27 @@ font-size:19px;
 
 }
 
-    .about-heading{
-    grid-template-columns:30px 1fr 30px;
-    column-gap:10px;
+.about-heading{
+    grid-template-columns:45px 1fr 45px;
+    column-gap:2px;
     width:100%;
 }
 
 .about-heading img{
-    width:30px;
+    width:45px;
 }
 
 .about-heading h2{
     font-size:34px;
     white-space:normal;
     text-align:center;
+}
+    .about-heading img:first-child{
+    transform:translateX(-8px);
+}
+
+.about-heading .right{
+    transform:translateX(8px) scaleX(-1);
 }
 
 .services-grid{
